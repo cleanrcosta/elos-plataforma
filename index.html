@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/style.css">
+    <title>ELOS - Uma escola inclusiva à distância (EAD), com acessibilidade exclusiva para pessoas PCD!</title>
+    <style>
+          .nav a {
+            text-decoration: none;
+            color: blueviolet;
+
+        }
+
+        .link-rp a {
+            text-decoration: none;
+            color: hsl(0, 0%, 100%);
+
+
+
+        }
+
+        .nav-link a{
+            text-decoration: none;
+            color: hsl(0, 0%, 100%);
+
+
+
+        }
+
+        .link-rp {
+            color: hsl(0, 0%, 100%);
+        }
+
+        html {
+            font-size: 1rem;
+        }
+
+        .btn.btn-outline-success:hover {
+            background-color: orange;
+            border-color: transparent;
+            color: #ffffff;
+            transform: scale(1.15);
+        }
+
+        .btn.btn-outline-success {
+
+            border-color: rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+            transition: transform 0.3s ease;
+
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+
+        .banner-text {
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            margin-right: 100px;
+        }
+        
+
+
+
+        .nav-link {
+
+            color: #ffffff;
+            transition: transform 0.3s ease;
+            margin-right: 50px;
+
+        }
+
+        .nav-link:hover {
+
+            color: #ffffff;
+            transform: scale(1.15);
+
+        }
+
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            /* Ajuste a altura conforme necessário */
+            background-color: orange;
+            /* Cor da linha */
+            bottom: -5px;
+            /* Espaço abaixo do link */
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+
+
+
+
+
+        .navbar-brand img {
+            width: 100x;
+            height: 100px;
+            transition: transform 0.8s ease;
+            border-radius: 20px;
+
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.15);
+            border: 2px solid orange;
+
+        }
+
+        .navbar-brand {
+            transition: transform 0.8s ease;
+            border-radius: 20px;
+            margin-left: 35px;
+        }
+
+        .fade-in-left {
+            animation: fadeInLeft 3s ease-in-out;
+        }
+
+        .fade-in-right {
+            animation: fadeInRight 3s ease-in-out;
+        }
+        .certificado img{
+            width: 20%;
+            height: auto;
+            
+        }
+
+        .video-container {
+            border: 1px solid orange;
+            border-radius: 25px;
+
+            opacity: 0;
+            animation: fadeIn 6s ease forwards;
+
+        }
+
+        .video-container h2 {
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            margin-right: 100px;
+        }
+
+        .container-mood {
+
+            /* Borda fina */
+            margin: 20px;
+            /* Margem de 20px */
+            opacity: 0;
+            animation: fadeIn 10s ease forwards;
+            /* Animação de surgimento suave */
+        }
+
+        .container-mood {
+            color: white;
+
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            margin-right: 100px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 6s ease forwards;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 6s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+
+
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 15s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+
+
+
+        @media (max-width: 768px) {
+            .banner-text {
+                margin-right: 2px;
+
+            }
+
+            h1 {
+                font-size: 16px;
+            }
+
+            h4 {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 346px) {
+            .banner-text {
+                margin-right: 2px;
+
+            }
+
+            h1 {
+                font-size: 14px;
+            }
+
+            h4 {
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width: 576px) {
+            body {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            body {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="   background: linear-gradient(to bottom, hwb(197 9% 27%), gray); border: none; margin: 0px; padding: 0px;">
+
+    <!--  MENU --><br>
+    <nav class="navbar navbar-expand-lg  col-11,6  m-auto " style="background-color:alpha; border-radius: 20px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="src/img/icons/logo-elos.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0" style="margin-right: 100px;">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Área do aluno </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre nós </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato </a>
+                    </li>
+
+                    <!--  <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Dropdown
+           </a>
+           <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="#">Action</a></li>
+             <li><a class="dropdown-item" href="#">Another action</a></li>
+             <li><hr class="dropdown-divider"></li>
+             <li><a class="dropdown-item" href="#">Something else here</a></li>
+           </ul>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+         </li> -->
+                </ul>
+                <form class="d-flex ms-auto" role="search" style="display: flex; ">
+                    <input class="form-control me-2" type="search" placeholder="Faça sua busca"
+                        aria-label="Faça sua busca" ">
+                   <button class=" btn btn-outline-success me-2" type="submit">Buscar</button>
+                </form>
+
+            </div>
+
+    </nav>
+    <hr class="col-md-8 ">
+    <div class="container-fluid p-0 position-relative">
+        <img src="src/img/banner/bg-banner.jpg" alt="Banner" class="banner img-fluid">
+        <div class="banner-text position-absolute top-0 end-0">
+            <h1>PLATAFORMA EAD</h1>
+            <h4>Junte-se à ELOS! <br>Oferecemos um ambiente virtual<br> de aprendizagem acessível <br>e adaptado para
+                alunos com
+                <br> deficiências físicas, sensoriais,<br> intelectuais e múltiplas
+            </h4>
+        </div>
+    </div>
+
+
+
+    <!--  O CORPO DA PÁGINA COMEÇA AQUI E VAI ATÉ O COMENTARIO "RODAPÉ" -->
+
+
+
+
+
+
+
+    <main style="background-color: #ffffff; margin-top: 0px;">
+        <div class="container text-center" style="font-family: 'Roboto', sans-serif; padding: 50px;">
+            <br><br>
+            <h2 style="color: hsl(234, 46%, 54%);">PARA QUEM SERVE NOSSO SITE:</h2>
+            <div class="p-3 mb-2 bg-light text-dark fade-in-left">
+                <p>Alunos com deficiências físicas, sensoriais, intelectuais e múltiplas</p>
+            </div>
+            <div class="p-3 mb-2 bg-white text-dark fade-in-right">
+                <p>Estudantes que buscam uma educação acessível e inclusiva</p>
+            </div>
+            <div class="p-3 mb-2 bg-light text-dark fade-in-left">
+                <p>Pessoas que preferem ou necessitam de um ambiente de aprendizagem à distância</p>
+            </div>
+            <div class="p-3 mb-2 bg-white text-dark fade-in-right">
+                <p>Educadores e profissionais que trabalham com inclusão e acessibilidade</p>
+            </div>
+            <div class="p-3 mb-2 bg-light text-dark fade-in-left">
+                <p>Pais e responsáveis que procuram uma educação adaptada para seus filhos</p>
+            </div>
+
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="certificado">
+                <img src="src/img/cursos/mec.png" alt="" srcset="">
+            </div>
+        </div><br><br><br><br>
+    </main><br><br><br><br>
+    
+    
+    <div class="d-flex justify-content-center">
+        <div class="container text-center my-4 video-container">
+            <br><br>
+            <h2>FICOU INTERESSADO? VEJA COMO FUNCIONA:</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SEU_VIDEO_ID"
+                    allowfullscreen></iframe><br><br>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="container-mood">
+        <div class="row">
+            <div class="col-md-6 slide-in-left">
+                <h2>Plataforma Moodle - AVA</h2>
+                <p>O Moodle é uma plataforma de aprendizagem online amplamente utilizada em instituições educacionais.
+                    Ele oferece um ambiente virtual interativo e acessível, permitindo que alunos e educadores colaborem
+                    e acessem recursos educacionais de forma eficiente.</p>
+                <ul>
+                    <li><strong>Compatibilidade com Leitores de Tela</strong>: Navegação eficaz para deficientes
+                        visuais.</li>
+                    <li><strong>Teclas de Atalho</strong>: Facilita a navegação para dificuldades motoras.</li>
+                    <li><strong>Legendas e Transcrições</strong>: Beneficia deficientes auditivos.</li>
+                    <li><strong>Personalização de Interface</strong>: Ajustes de fonte e contraste.</li>
+                    <li><strong>Avaliação Adaptativa</strong>: Avaliações personalizadas para necessidades individuais.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 slide-in-right">
+                <img src="src/img/cursos/capt.jpg" alt="Descrição da Imagem" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="container-mood">
+        <div class="row">
+            <div class="col-md-6 slide-in-left">
+                <img src="src/img/cursos/teams.png" alt="Descrição da Imagem" class="img-fluid">
+            </div>
+            <div class="col-md-6 slide-in-right">
+                <h2>Aulas ao Vivo pelo Teams</h2>
+                <p>Oferecemos aulas ao vivo pelo Microsoft Teams, proporcionando uma experiência de aprendizagem
+                    interativa e acessível para todos os alunos.</p>
+                <ul>
+                    <li><strong>Interpretação em Libras</strong>: Aulas com intérpretes de Libras para deficientes
+                        auditivos.</li>
+                    <li><strong>Legendas em Tempo Real</strong>: Legendas automáticas para melhor compreensão.</li>
+                    <li><strong>Compartilhamento de Tela</strong>: Facilita a visualização de materiais didáticos.</li>
+                    <li><strong>Gravação de Aulas</strong>: Aulas gravadas para revisão posterior.</li>
+                    <li><strong>Chat e Reações</strong>: Interação em tempo real com professores e colegas.</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <section id="depoimentos" class="bg-light text-center"><br><br>
+        <h1 style="color: orange; font-family: sans-serif;">Depoimentos</h1><br>
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="card h-100 slide-in-left" style="height: 400px; width: 300px;">
+                    <img src="src/img/depoimentos/joao.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Ricardo Moraes</h5>
+                        <p class="card-text">"Sempre foi um desafio ir até a escola e acompanhar as aulas. A falta de acessibilidade e apoio adequado tornava o aprendizado ainda mais difícil. A educação a distância (EAD) para pessoas com deficiência (PCD) é uma solução que transforma vidas, permitindo que todos tenham acesso ao conhecimento sem barreiras físicas."</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Ex-Aluno EDU PCD</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 fade-in" style="height: 400px; width: 300px;">
+                    <img src="src/img/depoimentos/maria.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Maria Brito</h5>
+                        <p class="card-text">"A inclusão na aprendizagem escolar convencional sempre foi um obstáculo. As metodologias tradicionais não atendem às minhas necessidades específicas. Com a EAD para PCD, finalmente encontrei um ambiente de aprendizado inclusivo e adaptado, onde posso desenvolver meu potencial ao máximo."</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Estudante EDU PCD</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card h-100 slide-in-right" style="height: 400px; width: 300px;">
+                    <img src="src/img/depoimentos/timoteo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Carlos Chagas</h5>
+                        <p class="card-text">"Entrar no mercado de trabalho foi um grande desafio. As empresas muitas vezes não estão preparadas para receber pessoas com deficiência, o que dificulta a adaptação e o crescimento profissional. A EAD para PCD não só facilita o acesso ao conhecimento, mas também prepara melhor os profissionais para enfrentar o mercado de trabalho."</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-body-secondary">Estudante EDU PCD</small>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br><br>
+    </section>
+    
+
+
+    <section id="contato" class="bg-light text-center"><br><br>
+        <h1 style="color: orange; font-family: sans-serif;">Está com dúvidas? <br>Entre em contato conosco</h1><br>
+        <div class="container d-flex justify-content-center">
+            <form class="p-4 border" style="width: 400px;">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+                </div>
+                <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" placeholder="Seu telefone">
+                </div>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" rows="3" placeholder="Sua mensagem"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                
+            </form><br><br>
+        </div><br><br>
+    </section>
+    <br><br><br><br><br>
+    <div class="d-flex justify-content-center my-4">
+        <a href="inscricao.html">
+            <button class="btn btn-primary btn-lg">Inscreva-se agora mesmo!</button>
+          </a>
+          
+    </div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+    <br><br><br>
+
+
+
+
+
+    <!-- RODAPÉ -->
+
+    <br><br>
+    <hr>
+    <br><br>
+    <footer class=" text-light" style="background-color:#abb4bb75 ; ">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-4">
+                    <ul class="nav flex-column" style="text-decoration: none; color: rgb(103, 141, 175);">
+                        <br><br><br>
+                        <li class="nav-link"><a href="#">Retornar a página Inicial</a></li>
+                        <li class="nav-link"><a href="#">Sobre nós</a></li>
+                        <li class="nav-link"><a href="#">Contato</a></li>
+                        <li class="nav-link"><a href="#">Área do aluno</a></li>
+                        <li class="nav-link"><a href="#">Programa Jovem Aprendiz</a></li>
+                        <li class="nav-link"><a href="#">Suporte</a></li>
+                    </ul>
+                </div>
+                <div class="col-8">
+                    <p>
+
+                    </p>
+
+                    <article class="link-rp">
+
+
+                        <p>
+                            <strong>Sobre nós:</strong> Saiba mais sobre nossa missão de oferecer educação inclusiva
+                            e
+                            acessível para todos.
+                        </p>
+
+                        <p><strong>Contato:</strong> Entre em contato conosco para mais informações ou suporte.</p>
+
+                        <p><strong>Suporte:</strong> Precisa de ajuda? Nossa equipe está pronta para assisti-lo.</p>
+
+                        <p><strong>Política de Privacidade:</strong> Leia nossa política de privacidade para
+                            entender
+                            como
+                            protegemos suas informações.</p>
+
+                        <p><strong>Termos de Uso:</strong> Conheça os termos e condições de uso do nosso site e
+                            serviços.
+                        </p> <br><br>
+                        <a href="https://www.seusite.com" target="_blank" style="margin-right: 10px;">
+                            <img src="src/img/icons/facebook.png" alt="Descrição da Imagem"
+                                style="width: 32px; height: 32px;">
+                        </a>
+                        <a href="https://www.seusite.com" target="_blank" style="margin-right: 10px;">
+                            <img src="src/img/icons/instagram.png" alt="Descrição da Imagem"
+                                style="width: 32px; height: 32px;">
+                        </a>
+                        <a href="https://www.seusite.com" target="_blank">
+                            <img src="src/img/icons/twitter-draw-logo.png" alt="Descrição da Imagem"
+                                style="width: 32px; height: 32px;">
+                        </a><br><br>
+                    </article>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center" style="background-color:#abb4bb75 ; padding: 20px; color:rgb(103, 141, 175) ;">
+            &copy 2025 Copyright: <a href="#" style="text-decoration: none; color: rgb(103, 141, 175);">ELOS - Uma
+                escola inclusiva à distância (EAD), com acessibilidade exclusiva para pessoas PCD!</a>
+        </div>
+    </footer>
+</body>
+
+</html>
